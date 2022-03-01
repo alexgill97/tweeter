@@ -1,15 +1,29 @@
 .new-tweet{
-  display: flex;
-  flex-direction: column;
+  background-color: whitesmoke;
+  margin: 1em;
+  border-radius: 15px;
 }
 
-.new-tweet-bottom {
+.tweet-bottom {
   display: flex;
   justify-content: space-between;
 }
 
 #tweet-text {
-  background-color: transparent;
+  width: 100%;
   border: none;
+  background: transparent;
   outline: none;
+  border-bottom: 2px solid lightslategray;
+}
+
+.tweet-bottom > button {
+  font-family: 'Bungee', cursive;
+  background-color: blue;
+  color: white;
+}
+
+.tweet-bottom > output {
+  font-family: 'Bungee', cursive;
+  margin-right: 1em;
 }
