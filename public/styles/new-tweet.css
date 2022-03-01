@@ -1,0 +1,15 @@
+.new-tweet{
+  display: flex;
+  flex-direction: column;
+}
+
+.new-tweet-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+#tweet-text {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
