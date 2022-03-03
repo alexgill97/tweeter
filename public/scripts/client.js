@@ -68,19 +68,36 @@ const data = [
 const renderTweets = (tweets) => {
   $('.tweet-container').empty();
   return tweets.map((tweet) => {
-    return $('.tweet-container').append(createTweetElement(tweet));
+    return $('.tweet-container').prepend(createTweetElement(tweet));
   }
 )};
 
+const loadTweets = () => {
+  $.get('/tweets')
+    .then(data => {
+      renderTweets(data);
+    })
+    .catch(err => console.log(err)) 
+}
 
 
 $(() => {
-  renderTweets(data)
-
+  loadTweets()
   $('.tweet-form').submit(function (e) {
     e.preventDefault();
-    const data = $(this).serialize();
-    console.log(data);
-    $.post('/tweets', data);
-  });
+    if ($('.counter').val() >= 0 && $('.counter').val() < 140) {
+      const data = $(this).serialize();
+      $.post('/tweets', data)
+        .then(() => {
+          loadTweets()
+          $("#text").val('')
+          $('.counter').val(140)
+        })
+        .catch((err) => {
+          console.log(err)
+        })
+    } else {
+        return alert('Please enter valid tweet length')
+    }
+  })
 });
