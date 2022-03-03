@@ -5,7 +5,7 @@
  */
 
 
-
+// <-- Generates HTML markup given tweet data -->
 const createTweetElement = (tweet) => {
 
   const { user, content, created_at } = tweet;
@@ -39,6 +39,7 @@ const createTweetElement = (tweet) => {
   return tweetMarkup;
 };
 
+// <-- Renders tweets in database -->
 const renderTweets = (tweets) => {
   $('.tweet-container').empty();
   return tweets.map((tweet) => {
@@ -47,6 +48,7 @@ const renderTweets = (tweets) => {
   );
 };
 
+// <-- Generates HTML markup given tweet data -->
 const loadTweets = () => {
   $.get('/tweets')
     .then(data => {
@@ -55,12 +57,14 @@ const loadTweets = () => {
     .catch(err => console.log(err));
 };
 
+// <-- Logic for error popup when tweets too long/short -->
 const escapeText = (str) => {
   const div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 };
 
+// <-- Loads logic when document ready -->
 $(() => {
   $(".error").hide();
   loadTweets();

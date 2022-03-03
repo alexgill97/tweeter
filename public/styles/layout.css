@@ -20,7 +20,7 @@ html {
 body {
   color: #545149;
   background-color: #f4f1ec;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-family: 'Source Sans Pro', sans-serif;
   display: flex;
   flex-direction: column;
@@ -29,8 +29,8 @@ body {
 .error {
   color: #D8000C;
   background-color: #FFD2D2;
-  padding:10px;
-  margin:10px 0;
+  padding:1em;
+  margin:1em 0;
 }
 
 /* main {
