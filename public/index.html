@@ -71,6 +71,10 @@
     <main class="container">
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
+        <div class="isa_error error">
+          <i class="fa fa-times-circle"></i>
+          Please enter a tweet with a valid character count!
+        </div>
         <form class="tweet-form" action="/tweets" method="POST" >
           <label for="tweet"></label>
           <textarea name="text" id="text" placeholder="What are you humming about?"></textarea>
