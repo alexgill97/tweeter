@@ -26,13 +26,6 @@ body {
   flex-direction: column;
 }
 
-.error {
-  color: #D8000C;
-  background-color: #FFD2D2;
-  padding:10px;
-  margin:10px 0;
-}
-
 /* main {
   display: flex;
   align-items: center;
