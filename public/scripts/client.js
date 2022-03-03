@@ -17,7 +17,7 @@ const createTweetElement = (tweet) => {
       <p>${user.name}</p>
     </div>
     <div class="head-right">
-      <p>${escapeText(content.text)}</p>
+      <p>${escapeText(user.handle)}</p>
     </div>
   </div>
   <div class="tweet-body">

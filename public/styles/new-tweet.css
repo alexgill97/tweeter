@@ -1,7 +1,6 @@
 .new-tweet{
-  background-color: whitesmoke;
   margin: 1em;
-  border-radius: 15px;
+  padding: 1em;
 }
 
 .tweet-bottom {

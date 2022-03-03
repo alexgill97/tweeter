@@ -47,6 +47,8 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <!-- Font Awesome -->
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
   </head>
 
   <body>
@@ -58,19 +60,19 @@
         <i class="fa-solid fa-angles-down"></i>
       </div>
     </nav>
-    <header>
+    <div class="mobile">
+    <header class="header">
       <div>
           <img src="/images/profile-hex.png"> 
       </div>
       <br>
       <div>
-          <h2>Your Name</h2>
+          <h2><strong>Your</strong> Name</h2>
       </div>
     </header>
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <h2>Compose Tweet</h2>
         <div class="isa_error error">
           <i class="fa fa-times-circle"></i>
           Please enter a tweet with a valid character count!
@@ -111,5 +113,6 @@
         </article>
       </section>
     </main>
+  </div>
   </body>
 </html>

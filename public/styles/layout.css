@@ -33,11 +33,28 @@ body {
   margin:1em 0;
 }
 
-/* main {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-} */
+@media screen and (min-width:1024px) {
+  .mobile {
+    display: flex;
+    margin-top: 1em;
+    /* align-items: center; */
+  }
+
+  .container {
+    width: 60vw;
+    flex-grow: 1;
+  }
+
+  .header {
+  height: 20em;
+  width: 40vw;
+  margin: 2em 0 0 1em;
+  position: sticky;
+  top: 7em;
+  border-radius: 15px;
+  flex-grow: 3;
+}
+}
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
